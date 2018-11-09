@@ -42,6 +42,24 @@ buildOutputScript([['Lf8hucmupbtenQ3VPdxvvJ8gTfAsaon2gf', 100000000]]);
 // '0100e1f505000000001976a914da6473ed373e08f46dd8003fca7ba72fbe9c555e88ac'
 ```
 
+## API
+
+### buildOutputScript([[address, value], ...]);
+
+Returns a (hex string) P2PKH transaction output script.
+
+#### address
+
+Type: `string`
+
+A valid P2PKH address.
+
+#### value
+
+Type: `number`
+
+Value to send to `address` in satoshis.
+
 ## License
 
 MIT © Luke Childs
