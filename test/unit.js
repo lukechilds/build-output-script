@@ -37,3 +37,7 @@ test('Unsafe integer value throws error', t => {
 
 	t.throws(() => buildOutputScript([['1LukeQU5jwebXbMLDVydeH4vFSobRV9rkj', (MAX_SAFE_INTEGER + 1)]]));
 });
+
+test('Not passing an array throws error', t => {
+	t.throws(() => buildOutputScript());
+});
