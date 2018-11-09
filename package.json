@@ -1,6 +1,6 @@
 {
   "name": "build-output-script",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Builds a P2PKH Bitcoin transaction output script.",
   "main": "src/index.js",
   "engines": {
