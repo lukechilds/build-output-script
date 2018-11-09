@@ -44,19 +44,25 @@ buildOutputScript([{address: 'Lf8hucmupbtenQ3VPdxvvJ8gTfAsaon2gf', value: 100000
 
 ## API
 
-### buildOutputScript(Array<[address, value]>)
+### buildOutputScript(outputs)
 
 Returns a (hex string) P2PKH transaction output script.
 
-#### address
+#### outputs
 
-Type: `string`
+Type: `Array(output[, output])`
+
+An array of one or more output objects.
+
+##### output.address
+
+Type: `String`
 
 A valid P2PKH address.
 
-#### value
+##### output.value
 
-Type: `number`
+Type: `Number`
 
 Value to send to `address` in satoshis.
 
