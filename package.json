@@ -10,9 +10,6 @@
     "test": "xo && nyc ava",
     "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
-  "xo": {
-    "extends": "xo-lukechilds"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/lukechilds/build-output-script.git"
@@ -33,7 +30,6 @@
   "devDependencies": {
     "ava": "^0.25.0",
     "coveralls": "^3.0.2",
-    "eslint-config-xo-lukechilds": "^1.0.1",
     "nyc": "^13.1.0",
     "xo": "^0.23.0"
   },

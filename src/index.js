@@ -1,6 +1,6 @@
 const bs58check = require('bs58check');
-const { encode: numberToCompactSizeUInt } = require('varuint-bitcoin');
-const { OP_DUP, OP_HASH160, OP_EQUALVERIFY, OP_CHECKSIG } = require('bitcoin-ops');
+const {encode: numberToCompactSizeUInt} = require('varuint-bitcoin');
+const {OP_DUP, OP_HASH160, OP_EQUALVERIFY, OP_CHECKSIG} = require('bitcoin-ops');
 
 const addressDecode = address => bs58check.decode(address).slice(1);
 
@@ -32,7 +32,7 @@ const buildOutputScript = outputs => {
 
 	let outputScript = [...numberToCompactSizeUInt(outputs.length)];
 
-	for (const { address, value } of outputs) {
+	for (const {address, value} of outputs) {
 		const pubKeyHash = addressDecode(address);
 
 		const scriptPubKey = [
