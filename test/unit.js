@@ -17,3 +17,14 @@ test('Multiple address and value inputs returns valid output script', t => {
 
 	t.is(outputScipt, expectedOutputScript);
 });
+
+test('Unsafe integer value throws error', t => {
+	const MAX_SAFE_INTEGER = 9007199254740991;
+
+	const outputScipt = buildOutputScript([['1LukeQU5jwebXbMLDVydeH4vFSobRV9rkj', MAX_SAFE_INTEGER]]);
+	const expectedOutputScript = '01ffffffffffff1f001976a914da6473ed373e08f46dd8003fca7ba72fbe9c555e88ac';
+
+	t.is(outputScipt, expectedOutputScript);
+
+	t.throws(() => buildOutputScript([['1LukeQU5jwebXbMLDVydeH4vFSobRV9rkj', (MAX_SAFE_INTEGER + 1)]]));
+});
