@@ -18,6 +18,15 @@ test('Multiple address and value inputs returns valid output script', t => {
 	t.is(outputScipt, expectedOutputScript);
 });
 
+test('Altcoin P2PKH addresses with a different pubkey hash prefix returns valid ouput script', t => {
+	const bitcoinOutputScipt = buildOutputScript([['1LukeQU5jwebXbMLDVydeH4vFSobRV9rkj', 100000000]]);
+	const litecoinOutputScipt = buildOutputScript([['Lf8hucmupbtenQ3VPdxvvJ8gTfAsaon2gf', 100000000]]);
+	const expectedOutputScript = '0100e1f505000000001976a914da6473ed373e08f46dd8003fca7ba72fbe9c555e88ac';
+
+	t.is(bitcoinOutputScipt, litecoinOutputScipt);
+	t.is(bitcoinOutputScipt, expectedOutputScript);
+});
+
 test('Unsafe integer value throws error', t => {
 	const MAX_SAFE_INTEGER = 9007199254740991;
 
