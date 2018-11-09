@@ -14,6 +14,25 @@ Builds a P2PKH Bitcoin transaction output script from an array of P2PKH addresse
 npm install build-output-script
 ```
 
+## Usage
+
+Send 1 BTC to `1LukeQU5jwebXbMLDVydeH4vFSobRV9rkj`
+
+```js
+buildOutputScript([['1LukeQU5jwebXbMLDVydeH4vFSobRV9rkj', 100000000]]);
+// '0100e1f505000000001976a914da6473ed373e08f46dd8003fca7ba72fbe9c555e88ac'
+```
+
+Send 1 BTC to `1LukeQU5jwebXbMLDVydeH4vFSobRV9rkj` and 1 BTC to `1BitcoinEaterAddressDontSendf59kuE`
+
+```js
+buildOutputScript([
+  ['1LukeQU5jwebXbMLDVydeH4vFSobRV9rkj', 100000000],
+  ['1BitcoinEaterAddressDontSendf59kuE', 100000000]
+]);
+// '0200e1f505000000001976a914da6473ed373e08f46dd8003fca7ba72fbe9c555e88ac00e1f505000000001976a914759d6677091e973b9e9d99f19c68fbf43e3f05f988ac'
+```
+
 ## License
 
 MIT © Luke Childs
