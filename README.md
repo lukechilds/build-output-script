@@ -21,7 +21,7 @@ npm install build-output-script
 Send 1 BTC to `1LukeQU5jwebXbMLDVydeH4vFSobRV9rkj`
 
 ```js
-buildOutputScript([['1LukeQU5jwebXbMLDVydeH4vFSobRV9rkj', 100000000]]);
+buildOutputScript([{ address: '1LukeQU5jwebXbMLDVydeH4vFSobRV9rkj', value: 100000000 }]);
 // '0100e1f505000000001976a914da6473ed373e08f46dd8003fca7ba72fbe9c555e88ac'
 ```
 
@@ -29,8 +29,8 @@ Send 1 BTC to `1LukeQU5jwebXbMLDVydeH4vFSobRV9rkj` and 1 BTC to `1BitcoinEaterAd
 
 ```js
 buildOutputScript([
-  ['1LukeQU5jwebXbMLDVydeH4vFSobRV9rkj', 100000000],
-  ['1BitcoinEaterAddressDontSendf59kuE', 100000000]
+  { address: '1LukeQU5jwebXbMLDVydeH4vFSobRV9rkj', value: 100000000 },
+  { address: '1BitcoinEaterAddressDontSendf59kuE', value: 100000000 }
 ]);
 // '0200e1f505000000001976a914da6473ed373e08f46dd8003fca7ba72fbe9c555e88ac00e1f505000000001976a914759d6677091e973b9e9d99f19c68fbf43e3f05f988ac'
 ```
@@ -38,13 +38,13 @@ buildOutputScript([
 Send 1 LTC to `Lf8hucmupbtenQ3VPdxvvJ8gTfAsaon2gf`
 
 ```js
-buildOutputScript([['Lf8hucmupbtenQ3VPdxvvJ8gTfAsaon2gf', 100000000]]);
+buildOutputScript([{ address: 'Lf8hucmupbtenQ3VPdxvvJ8gTfAsaon2gf', value: 100000000 }]);
 // '0100e1f505000000001976a914da6473ed373e08f46dd8003fca7ba72fbe9c555e88ac'
 ```
 
 ## API
 
-### buildOutputScript([[address, value], ...]);
+### buildOutputScript(Array<[address, value]>)
 
 Returns a (hex string) P2PKH transaction output script.
 

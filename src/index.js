@@ -32,7 +32,7 @@ const buildOutputScript = outputs => {
 
 	let outputScript = [...numberToCompactSizeUInt(outputs.length)];
 
-	for (const [address, value] of outputs) {
+	for (const { address, value } of outputs) {
 		const pubKeyHash = addressDecode(address);
 
 		const scriptPubKey = [
