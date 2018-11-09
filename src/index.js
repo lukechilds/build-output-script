@@ -33,13 +33,13 @@ const buildOutputScript = outputs => {
 	let outputScript = [...numberToCompactSizeUInt(outputs.length)];
 
 	for (const [address, value] of outputs) {
-		const pubkeyHash = addressDecode(address);
+		const pubKeyHash = addressDecode(address);
 
 		const scriptPubKey = [
 			OP_DUP,
 			OP_HASH160,
-			pubkeyHash.length,
-			...pubkeyHash,
+			pubKeyHash.length,
+			...pubKeyHash,
 			OP_EQUALVERIFY,
 			OP_CHECKSIG
 		];
