@@ -41,3 +41,7 @@ test('Unsafe integer value throws error', t => {
 test('Not passing an array throws error', t => {
 	t.throws(() => buildOutputScript());
 });
+
+test('Passing an empty array throws error', t => {
+	t.throws(() => buildOutputScript([]));
+});
