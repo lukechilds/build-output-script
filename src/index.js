@@ -22,6 +22,10 @@ const numberToUInt64 = number => {
 };
 
 const buildOutputScript = outputs => {
+	if (!Array.isArray(outputs)) {
+		throw new TypeError(`Expected 'outputs' to be of type 'array', got: '${outputs}'.`);
+	}
+
 	let outputScript = [...numberToCompactSizeUInt(outputs.length)];
 
 	for (const [address, value] of outputs) {
