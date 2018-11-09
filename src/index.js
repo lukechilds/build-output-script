@@ -26,6 +26,10 @@ const buildOutputScript = outputs => {
 		throw new TypeError(`Expected 'outputs' to be of type 'array', got: '${outputs}'.`);
 	}
 
+	if (outputs.length === 0) {
+		throw new TypeError('\'outputs\' cannot be an empty array.');
+	}
+
 	let outputScript = [...numberToCompactSizeUInt(outputs.length)];
 
 	for (const [address, value] of outputs) {
