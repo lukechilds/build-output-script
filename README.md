@@ -5,6 +5,7 @@
 [![Build Status](https://travis-ci.com/lukechilds/build-output-script.svg?branch=master)](https://travis-ci.com/lukechilds/build-output-script)
 [![Coverage Status](https://coveralls.io/repos/github/lukechilds/build-output-script/badge.svg?branch=master)](https://coveralls.io/github/lukechilds/build-output-script?branch=master)
 [![npm](https://img.shields.io/npm/v/build-output-script.svg)](https://www.npmjs.com/package/build-output-script)
+[![tippin.me](https://badgen.net/badge/%E2%9A%A1%EF%B8%8Ftippin.me/@lukechilds/F0918E)](https://tippin.me/@lukechilds)
 
 Builds a P2PKH Bitcoin transaction output script from an array of P2PKH addresses and amounts. Will also work with any Bitcoin derived cryptocurrencies with a single byte pubkey hash address prefix.
 
